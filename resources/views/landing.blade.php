@@ -229,7 +229,7 @@
             shadow-lg
             border
             hover:scale-110
-            transition"
+            transition">
 
             🛒
 
