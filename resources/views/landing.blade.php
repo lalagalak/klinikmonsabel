@@ -9,6 +9,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
         <link href="https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@400;700&family=Text+Me+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -65,6 +66,28 @@
             line-height:1.1;
         }
 
+        .heroSwiper{
+            width:100%;
+            padding:20px 0 50px;
+        }
+
+        .heroSwiper .swiper-slide{
+            width:78%;
+            transition:.4s;
+            opacity:.45;
+            transform:scale(.85);
+        }
+
+        .heroSwiper .swiper-slide-active{
+            opacity:1;
+            transform:scale(1);
+        }
+
+        .heroSwiper .swiper-slide-prev,
+        .heroSwiper .swiper-slide-next{
+            opacity:.85;
+        }
+
         @keyframes fade{
             from{
                 opacity:0;
@@ -107,7 +130,7 @@
 <body class="text-gray-800">
 
 <!-- ================= NAVBAR ================= -->
-<nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
 
     <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
 
@@ -115,16 +138,16 @@
         <a href="/" class="flex items-center gap-3">
 
             <img src="{{ asset('images/logo.png') }}"
-                 class="w-12 h-12 rounded-full shadow-lg border bg-white p-1">
+                 class="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg border bg-white p-1">
 
             <div>
-                <h1 class="logo-title text-3xl text-[#6250B4]">
+                <h1 class="logo-title text-xl md:text-3xl text-[#6250B4]">
                     Monsabel Clinic
                 </h1>
 
-            <p class="text-xs tracking-[3px] text-gray-500 uppercase mt-1">
-                     Veterinary Clinic
-                </p>
+            <p class="block text-[9px] tracking-[2px] text-gray-500 uppercase">
+                Veterinary Clinic
+            </p>
             </div>
 
         </a>
@@ -193,12 +216,68 @@
         <!-- RIGHT SIDE -->
         <div class="flex items-center gap-4">
 
+        @php
+            $cart = session('cart', []);
+            $totalCart = count($cart);
+        @endphp
+
+        <a href="/keranjang"
+        class="relative flex items-center justify-center
+            w-10 h-10 md:w-12 md:h-12
+            rounded-full
+            bg-white
+            shadow-lg
+            border
+            hover:scale-110
+            transition">
+
+            🛒
+
+            @if($totalCart > 0)
+
+            <span
+                class="absolute -top-1 -right-1
+                    bg-red-500
+                    text-white
+                    text-[10px] md:text-xs
+                    w-5 h-5
+                    rounded-full
+                    flex items-center justify-center">
+
+                {{ $totalCart }}
+
+            </span>
+
+            @endif
+
+        </a>
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+            id="menuBtn"
+            class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl border shadow">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+
+                <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+
+            </svg>
+
+        </button>
+
             {{-- ================= CART ================= --}}
             <a href="/keranjang"
-               class="relative flex items-center justify-center
-                      w-12 h-12 rounded-full
-                      bg-white shadow-lg border
-                      hover:scale-110 transition">
+            class="hidden md:flex relative items-center justify-center
+                w-12 h-12 rounded-full
+                bg-white shadow-lg border
+                hover:scale-110 transition">
 
                 🛒
 
@@ -225,7 +304,7 @@
            <!-- AUTH -->
             @auth
 
-            <div class="relative group">
+            <div class="hidden md:block relative group">
 
             <button
                 class="navbar-menu
@@ -330,12 +409,12 @@
             @else
 
             <a href="/login"
-            class="navbar-menu bg-[#6250B4] text-white px-6 py-3 rounded-xl">
+            class="hidden md:block navbar-menu bg-[#6250B4] text-white px-6 py-3 rounded-xl">
                 LOGIN
             </a>
 
             <a href="/register"
-            class="navbar-menu border border-gray-300 px-6 py-3 rounded-xl">
+            class="hidden md:block navbar-menu border border-gray-300 px-6 py-3 rounded-xl">
                 REGISTER
             </a>
 
@@ -347,9 +426,85 @@
 
 </nav>
 
+<div
+    id="mobileMenu"
+    class="hidden fixed top-[72px] left-0 right-0 z-40 md:hidden bg-white shadow-xl border-b">
+
+    <a href="/" class="block px-6 py-4 border-b">Home</a>
+
+    <a href="#about" class="block px-6 py-4 border-b">About</a>
+
+    <details>
+
+        <summary class="px-6 py-4 cursor-pointer border-b">
+            Services
+        </summary>
+
+        <a href="/petshop" class="block px-10 py-3">
+            Petshop
+        </a>
+
+        <a href="/grooming" class="block px-10 py-3">
+            Grooming
+        </a>
+
+        <a href="/hotel" class="block px-10 py-3">
+            Pet Hotel
+        </a>
+
+    </details>
+
+    <a href="#dokter" class="block px-6 py-4 border-b">
+        Doctors
+    </a>
+
+    <a href="#contact" class="block px-6 py-4 border-b">
+        Contact
+    </a>
+
+    <hr>
+    
+    @guest
+
+    <a href="/login" class="block px-6 py-4 border-b">
+        Login
+    </a>
+
+    <a href="/register" class="block px-6 py-4">
+        Register
+    </a>
+
+    @else
+
+    <a href="/profile" class="block px-6 py-4 border-b">
+        Profil Saya
+    </a>
+
+    <a href="/history" class="block px-6 py-4 border-b">
+        Riwayat Booking
+    </a>
+
+    <form method="POST"
+        action="{{ route('logout') }}">
+
+        @csrf
+
+        <button
+            class="w-full text-left px-6 py-4 text-red-600">
+
+            Logout
+
+        </button>
+
+    </form>
+
+    @endguest
+
+</div>
+
 
 <!-- ================= PREMIUM HERO SECTION ================= -->
-<section class="bg-white">
+<section class="bg-white pt-20">
 
     <div class="max-w-5xl mx-auto px-5 lg:px-8 py-10">
 
@@ -378,7 +533,7 @@
 
             </div>
 
-            <div class="flex justify-center items-center gap-3 h-[480px]">
+            <div class="hidden lg:flex justify-center items-center gap-3 h-[480px]">
 
                 <a href="/grooming" class="group relative flex-1 hover:flex-[3] transition-all duration-500 ease-in-out h-full rounded-2xl overflow-hidden">
 
@@ -471,6 +626,116 @@
                 </a>
 
             </div>
+
+        <div class="lg:hidden">
+
+            <div class="swiper heroSwiper">
+
+                <div class="swiper-wrapper">
+
+                    <!-- Grooming -->
+                    <div class="swiper-slide">
+
+                        <a href="/grooming"
+                        class="block relative h-[320px] rounded-[35px] overflow-hidden">
+
+                            <img
+                                src="{{ asset('images/grooming.jpg') }}"
+                                class="w-full h-full object-cover">
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#6250B4]/90 via-[#6250B4]/30 to-transparent"></div>
+
+                            <div class="absolute bottom-7 left-6 text-white">
+
+                                <p class="uppercase tracking-[2px] text-xs">
+                                    Monsabel Service
+                                </p>
+
+                                <h3 class="text-2xl font-bold mt-2">
+                                    Pet Grooming
+                                </h3>
+
+                                <p class="mt-2 text-sm">
+                                    Mandi, haircut dan nail care profesional.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- Hotel -->
+                    <div class="swiper-slide">
+
+                        <a href="/hotel"
+                        class="block relative h-[320px] rounded-[35px] overflow-hidden">
+
+                            <img
+                                src="{{ asset('images/hotel.jpg') }}"
+                                class="w-full h-full object-cover">
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#6250B4]/90 via-[#6250B4]/30 to-transparent"></div>
+
+                            <div class="absolute bottom-7 left-6 text-white">
+
+                                <p class="uppercase tracking-[2px] text-xs">
+                                    Monsabel Service
+                                </p>
+
+                                <h3 class="text-2xl font-bold mt-2">
+                                    Pet Hotel
+                                </h3>
+
+                                <p class="mt-2 text-sm">
+                                    Penitipan nyaman dan aman.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- Petshop -->
+                    <div class="swiper-slide">
+
+                        <a href="/petshop"
+                        class="block relative h-[320px] rounded-[35px] overflow-hidden">
+
+                            <img
+                                src="{{ asset('images/petshop.jpg') }}"
+                                class="w-full h-full object-cover">
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#6250B4]/90 via-[#6250B4]/30 to-transparent"></div>
+
+                            <div class="absolute bottom-7 left-6 text-white">
+
+                                <p class="uppercase tracking-[2px] text-xs">
+                                    Monsabel Service
+                                </p>
+
+                                <h3 class="text-2xl font-bold mt-2">
+                                    Pet Shop
+                                </h3>
+
+                                <p class="mt-2 text-sm">
+                                    Produk premium untuk hewan kesayangan.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination mt-5"></div>
+
+            </div>
+
+        </div>
             
         </div>
         
@@ -1366,6 +1631,13 @@
 
 <script>
 
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
     // =========================
     // REVEAL ANIMATION
     // =========================
@@ -1387,6 +1659,56 @@
 
     });
 
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper(".heroSwiper",{
+
+    effect:"coverflow",
+
+    grabCursor:true,
+
+    centeredSlides:true,
+
+    slidesPerView:"auto",
+
+    loop:true,
+
+    coverflowEffect:{
+
+        rotate:0,
+
+        stretch:0,
+
+        depth:180,
+
+        modifier:1,
+
+        scale:0.88,
+
+        slideShadows:false,
+
+    },
+
+    autoplay:{
+
+        delay:3500,
+
+        disableOnInteraction:false,
+
+    },
+
+    pagination:{
+
+        el:".swiper-pagination",
+
+        clickable:true,
+
+    }
+
+});
 </script>
 
 </body>

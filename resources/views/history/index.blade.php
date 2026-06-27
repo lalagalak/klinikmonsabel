@@ -14,10 +14,10 @@
 
     </div>
 
-    <div class="grid md:grid-cols-4 gap-4 mb-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6">
 
         <!-- TOTAL GROOMING -->
-        <div class="bg-white rounded-xl shadow-md border p-4">
+        <div class="bg-white rounded-xl shadow-md border p-3 md:p-4">
 
             <p class="text-gray-500 text-xs font-medium">
                 Total Grooming

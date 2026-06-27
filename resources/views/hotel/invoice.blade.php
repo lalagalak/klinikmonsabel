@@ -4,42 +4,36 @@
 
 <div class="bg-white rounded-2xl shadow-md p-6">
 
-    <div class="flex justify-between items-center mb-5">
+<!-- HEADER -->
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
 
-        <div>
+    <!-- Judul -->
+    <div class="flex-1">
 
-            <h1 class="text-2xl font-black text-purple-700">
+        <h1 class="text-2xl sm:text-3xl font-black text-[#6250B4] leading-tight">
+            Invoice Booking Pet Hotel
+        </h1>
 
-                Invoice Booking Pet Hotel
-
-            </h1>
-
-            <p class="text-xs text-gray-500 mt-1">
-
-                Silakan periksa kembali detail booking Anda sebelum menyelesaikan pemesanan.
-
-            </p>
-
-        </div>
-
-        <div class="text-right">
-
-            <p class="text-xs text-gray-500">
-
-                Kode Booking
-
-            </p>
-
-            <p class="font-black text-lg text-purple-700">
-
-                {{ $data['kode_booking'] }}
-
-            </p>
-
-        </div>
+        <p class="text-xs sm:text-sm text-gray-500 mt-2 max-w-md">
+            Silakan periksa kembali detail booking Anda sebelum menyelesaikan pemesanan.
+        </p>
 
     </div>
 
+    <!-- Kode Booking -->
+    <div class="sm:text-right bg-[#F8F7FC] border border-purple-100 rounded-xl px-4 py-3 shrink-0">
+
+        <p class="text-[10px] uppercase tracking-wider text-gray-500">
+            Kode Booking
+        </p>
+
+        <p class="mt-1 text-lg sm:text-xl font-black text-[#6250B4] break-words">
+            {{ $data['kode_booking'] }}
+        </p>
+
+    </div>
+
+</div>
 
     <div class="bg-gray-50 rounded-xl p-4">
 

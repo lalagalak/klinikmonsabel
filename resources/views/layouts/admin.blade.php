@@ -11,12 +11,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-[#f7f5ff] overflow-hidden">
+<body class="bg-[#f7f5ff] overflow-x-hidden">
 
 <div class="flex h-screen">
 
     <!-- SIDEBAR -->
-<aside class="w-64 bg-[#0f172a] text-white flex flex-col h-screen">
+    <aside id="sidebar" class="fixed xl:static top-0 left-0 z-50 w-64 h-screen bg-[#0f172a] text-white flex flex-col transform
+    -transition-x-full -translate-x-full xl:translate-x-0 transition-transform duration-300">
 
     <div class="h-20 flex items-center px-6 border-b border-white/10">
         <img src="{{ asset('images/logomonsabel.png') }}" class="w-10 h-10 rounded-full bg-white p-0.5">
@@ -72,9 +73,31 @@
     </div>
 </aside>
 
+<!-- Overlay Mobile -->
+<div id="overlay"
+     class="fixed inset-0 bg-black/40 hidden z-40 xl:hidden"></div>
+
+<!-- Hamburger -->
+<button id="menuBtn"
+        class="fixed top-5 left-5 z-50 xl:hidden bg-[#6250B4] text-white w-11 h-11 rounded-xl shadow-lg flex items-center justify-center">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-6 h-6"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor">
+
+        <path stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+
+    </svg>
+
+</button>
 
     <!-- CONTENT -->
-    <main class="flex-1 overflow-y-auto">
+    <main class="flex-1 overflow-y-auto pt-20 xl:pt-0">
 
         <div class="p-6 lg:p-8">
 
@@ -173,6 +196,28 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 @endif
+
+<script>
+
+const sidebar = document.getElementById('sidebar');
+const menuBtn = document.getElementById('menuBtn');
+const overlay = document.getElementById('overlay');
+
+menuBtn.addEventListener('click', function(){
+
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+
+});
+
+overlay.addEventListener('click', function(){
+
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+
+});
+
+</script>
 
 </body>
 </html>

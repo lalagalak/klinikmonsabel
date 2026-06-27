@@ -15,20 +15,6 @@
             <!-- LEFT -->
             <div>
 
-                <span class="inline-flex items-center
-                             px-4 py-2
-                             rounded-full
-                             bg-white/70
-                             backdrop-blur-sm
-                             text-[#15A34A]
-                             text-xs
-                             font-semibold
-                             shadow-sm">
-
-                    PET HOTEL MONSABEL
-
-                </span>
-
                 <h1 class="mt-5 leading-none">
 
                     <span class="block
@@ -370,7 +356,7 @@
                 <!-- CONTENT -->
                 <div class="p-6">
                     <!-- FITUR (DIKECILKAN) -->
-                    <div class="grid grid-cols-3 gap-3 mb-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
                         <div class="bg-purple-50 border border-purple-100 p-3 rounded-xl text-center">
                             <h4 class="font-bold text-[#6250B4] text-xs">Pengawasan 24 Jam</h4>
                             <p class="text-[10px] text-gray-500 mt-1">Dipantau petugas berpengalaman.</p>
@@ -484,10 +470,22 @@
                                 </div>
                             </div>
                             <hr class="my-3">
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs font-bold text-gray-800">Total Pembayaran</span>
-                                <span id="totalHarga" class="text-2xl font-extrabold text-[#6250B4]">Rp 0</span>
-                            </div>
+                            <!-- TOTAL -->
+<div class="flex justify-between items-end gap-3 mt-4">
+
+    <span class="text-sm font-bold text-gray-800 leading-tight">
+        Total Pembayaran
+    </span>
+
+    <span id="totalHarga"
+          class="text-lg sm:text-xl lg:text-3xl
+                 font-extrabold
+                 text-[#6250B4]
+                 whitespace-nowrap">
+        Rp 0
+    </span>
+
+</div>
                         </div>
 
                         <!-- BUTTON -->

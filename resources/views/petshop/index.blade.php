@@ -344,33 +344,33 @@ setTimeout(() => {
     </section>
 
 {{-- ================= SECTION 2: LAYANAN & TRENDING WEEKS ================= --}}
-<section class="max-w-6xl mx-auto px-6 py-12">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
     {{-- LAYANAN PETSHOP (3 KOLOM MINI) --}}
-    <div class="grid md:grid-cols-3 gap-4 mb-16">
-        <div class="bg-amber-50 p-4 rounded-2xl flex items-center gap-4 border border-amber-100">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 mb-8 lg:mb-16">
+        <div class="bg-amber-50 p-3 lg:p-4 rounded-xl lg:rounded-2xl flex items-center gap-4 border border-amber-100">
             <div class="bg-amber-100 p-2.5 rounded-xl text-amber-700">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V9.75M8.25 18.75a1.5 1.5 0 01-3 0M15.75 18.75a1.5 1.5 0 01-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V14.25m0 0A2.25 2.25 0 0018 12V6.75a2.25 2.25 0 00-2.25-2.25H6.108m11.892 9.75H1.5F" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 lg:w-6 lg:h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V9.75M8.25 18.75a1.5 1.5 0 01-3 0M15.75 18.75a1.5 1.5 0 01-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V14.25m0 0A2.25 2.25 0 0018 12V6.75a2.25 2.25 0 00-2.25-2.25H6.108m11.892 9.75H1.5F" /></svg>
             </div>
             <div>
-                <h4 class="font-bold text-sm text-gray-800">Antar Jemput Klinik</h4>
+                <h4 class="font-bold text-xs lg:text-xs lg:text-xs md:text-sm text-gray-800">Antar Jemput Klinik</h4>
                 <p class="text-xs text-gray-500">Mobil khusus jemput peliharaanmu</p>
             </div>
         </div>
         <div class="bg-purple-50 p-4 rounded-2xl flex items-center gap-4 border border-purple-100">
             <div class="bg-purple-100 p-2.5 rounded-xl text-purple-700">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 lg:w-6 lg:h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" /></svg>
             </div>
             <div>
-                <h4 class="font-bold text-sm text-gray-800">Konsultasi Dokter</h4>
+                <h4 class="font-bold text-xs lg:text-sm text-gray-800">Konsultasi Dokter</h4>
                 <p class="text-xs text-gray-500">Dukungan medis terpercaya</p>
             </div>
         </div>
         <div class="bg-blue-50 p-4 rounded-2xl flex items-center gap-4 border border-blue-100">
             <div class="bg-blue-100 p-2.5 rounded-xl text-blue-700">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499c.172-.436.784-.436.956 0l2.192 5.56 5.916.42c.473.033.662.614.316.94l-4.42 4.184 1.3 5.897c.104.47-.394.832-.811.594l-5.112-2.92-5.112 2.92c-.417.238-.915-.125-.811-.594l1.3-5.897-4.42-4.184c-.346-.327-.156-.907.316-.94l5.916-.42 2.192-5.56z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 lg:w-6 lg:h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499c.172-.436.784-.436.956 0l2.192 5.56 5.916.42c.473.033.662.614.316.94l-4.42 4.184 1.3 5.897c.104.47-.394.832-.811.594l-5.112-2.92-5.112 2.92c-.417.238-.915-.125-.811-.594l1.3-5.897-4.42-4.184c-.346-.327-.156-.907.316-.94l5.916-.42 2.192-5.56z" /></svg>
             </div>
             <div>
-                <h4 class="font-bold text-sm text-gray-800">Top Rate Products</h4>
+                <h4 class="font-bold text-xs lg:text-sm text-gray-800">Top Rate Products</h4>
                 <p class="text-xs text-gray-500">Kualitas produk terjamin premium</p>
             </div>
         </div>
@@ -379,28 +379,28 @@ setTimeout(() => {
     {{-- TRENDING HEADER --}}
     <div class="text-center mb-8">
         <span class="text-[#6250B4] text-xs font-bold uppercase tracking-widest">🔥 Paling Banyak Dicari</span>
-        <h2 class="text-2xl font-black text-gray-900 mt-1">Trending This Week</h2>
+        <h2 class="text-xl lg:text-2xl font-black text-gray-900 mt-1">Trending This Week</h2>
         <div class="w-12 h-1 bg-amber-500 mx-auto mt-2 rounded-full"></div>
     </div>
 
     {{-- GRID TRENDING (Disamakan 100% dengan Layout Utama Anda) --}}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5">
         @foreach ($trendingProduk as $trending)
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+        <div class="bg-white rounded-xl lg:rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
             
             <div class="h-44 flex items-center justify-center p-4 bg-white border-b border-gray-50 relative">
                 <span class="absolute top-2 left-2 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-sm">
                     Hot Item
                 </span>
-                <img src="{{ asset('produk/'.$trending->gambar) }}" alt="{{ $trending->nama_produk }}" class="max-h-full max-w-full object-contain">
+                <img src="{{ asset('produk/'.$trending->gambar) }}" alt="{{ $trending->nama_produk }}" class="max-h-24 sm:max-h-28 lg:max-h-full object-contain mx-auto">
             </div>
 
-            <div class="p-4 flex flex-col flex-1 justify-between">
+            <div class="p-3 lg:p-4 flex flex-col flex-1 justify-between">
                 <div>
-                    <h3 class="font-bold text-gray-900 text-sm leading-tight line-clamp-2 min-h-[40px]">
+                    <h3 class="font-bold text-gray-900 text-xs lg:text-xs lg:text-sm leading-tight line-clamp-2 min-h-[40px]">
                         {{ $trending->nama_produk }}
                     </h3>
-                    <p class="text-base font-black text-[#0A2D73] mt-2">
+                    <p class="text-sm lg:text-base font-black text-[#0A2D73] mt-2">
                         Rp {{ number_format($trending->harga,0,',','.') }}
                     </p>
                 </div>
@@ -411,11 +411,11 @@ setTimeout(() => {
                     
                     <div class="flex items-center justify-between gap-2">
                         <div class="flex border border-gray-300 rounded-xl overflow-hidden bg-gray-50">
-                            <button type="button" onclick="kurang('trending_{{ $trending->id }}')" class="w-8 h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">-</button>
-                            <input type="text" id="qtytrending_{{ $trending->id }}" name="qty" value="1" readonly class="w-8 h-8 text-center bg-transparent border-0 text-xs font-bold focus:ring-0 p-0">
-                            <button type="button" onclick="tambah('trending_{{ $trending->id }}', {{ $trending->stok }})" class="w-8 h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">+</button>                        </div>
+                            <button type="button" onclick="kurang('trending_{{ $trending->id }}')" class="w-7 h-7 lg:w-8 lg:h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">-</button>
+                            <input type="text" id="qtytrending_{{ $trending->id }}" name="qty" value="1" readonly class="w-7 h-7 lg:w-8 lg:h-8 text-center bg-transparent border-0 text-xs font-bold focus:ring-0 p-0">
+                            <button type="button" onclick="tambah('trending_{{ $trending->id }}', {{ $trending->stok }})" class="w-7 h-7 lg:w-8 lg:h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">+</button>                        </div>
                         
-                        <button type="submit" class="w-9 h-9 rounded-xl bg-[#0A2D73] text-white flex items-center justify-center hover:scale-105 transition shadow-sm">
+                        <button type="submit" class="w-8 h-8 lg:w-9 lg:h-9 rounded-xl bg-[#0A2D73] text-white flex items-center justify-center hover:scale-105 transition shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386a1.5 1.5 0 01-1.415 1.03L5.76 6.75m0 0h12.99m-12.99 0l1.5 7.5h9.99l1.5-7.5M9 19.5a.75.75 0 100 1.5.75.75 0 000-1.5zm9 0a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
                             </svg>
@@ -432,8 +432,7 @@ setTimeout(() => {
     <div id="produk-section" class="max-w-6xl mx-auto px-6 py-8">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
-            <div class="bg-white rounded-2xl border border-[#E8E2FF] p-5 lg:sticky lg:top-28 h-fit shadow-sm">
-                <h2 class="text-lg font-bold text-[#6250B4] mb-4 pb-2 border-b">Filter Produk</h2>
+            <div class="hidden lg:block bg-white rounded-2xl border border-[#E8E2FF] p-5 sticky top-28 h-fit shadow-sm">                <h2 class="text-lg font-bold text-[#6250B4] mb-4 pb-2 border-b">Filter Produk</h2>
 
                 <form method="GET" id="filter-form" class="space-y-5">
                     <div>
@@ -496,7 +495,7 @@ setTimeout(() => {
                         <h2 class="text-xl font-black text-gray-800">Semua Produk</h2>
                         <p class="text-xs text-gray-500">{{ $produk->total() }} produk tersedia</p>
                     </div>
-                    <div>
+                <div class="hidden lg:block">
                     <select
                         name="sort"
                         form="filter-form"
@@ -526,6 +525,71 @@ setTimeout(() => {
                     </div>
                 </div>
 
+                <div class="lg:hidden mt-4 space-y-3">
+
+                <form method="GET" class="flex-1">
+
+                    <div class="relative">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24">
+
+                            <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-5-5m2-5a7 7 0 11-14 0 7 7 0 0114 0"/>
+
+                        </svg>
+
+                        <input
+                            type="text"
+                            name="search"
+                            value="{{ request('search') }}"
+                            placeholder="Cari produk..."
+                            class="w-full h-12 rounded-full border border-orange-300 pl-11 pr-4 text-sm">
+
+                    </div>
+
+                </form>
+                <div class="flex items-center gap-2">
+
+                    <button
+                        id="openFilter"
+                        class="rounded-full border border-gray-200 bg-white py-3 font-semibold shadow-sm">
+
+                        Filter
+
+                    </button>
+
+                    <select
+                        name="sort"
+                        form="filter-form"
+                        onchange="document.getElementById('filter-form').submit()"
+                        class="rounded-full border border-gray-200 bg-white py-3 px-4 shadow-sm">
+
+                        <option value="">
+                            Urutkan
+                        </option>
+
+                        <option value="murah"
+                            {{ request('sort')=='murah'?'selected':'' }}>
+                            Harga Termurah
+                        </option>
+
+                        <option value="mahal"
+                            {{ request('sort')=='mahal'?'selected':'' }}>
+                            Harga Termahal
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
                 @if(request('search') || request('kategori') || request('brand') || request('min') || request('max'))
                 <div class="mb-6 p-4 bg-[#F8F6FF] border border-[#E8E2FF] rounded-2xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
                     <div class="flex items-center gap-3">
@@ -535,7 +599,7 @@ setTimeout(() => {
                             </svg>
                         </div>
                         <div>
-                            <p class="text-sm font-bold text-gray-800">Filter sedang aktif</p>
+                            <p class="text-xs md:text-sm font-bold text-gray-800">Filter sedang aktif</p>
                             <p class="text-xs text-gray-500">Menampilkan produk berdasarkan kriteria Anda.</p>
                         </div>
                     </div>
@@ -545,19 +609,19 @@ setTimeout(() => {
                 </div>
                 @endif
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5 gap-4">
                     @forelse ($produk as $item)
                     <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                        <div class="h-44 flex items-center justify-center p-4 bg-white border-b border-gray-50">
-                            <img src="{{ asset('produk/'.$item->gambar) }}" alt="{{ $item->nama_produk }}" class="max-h-full max-w-full object-contain">
+                        <div class="h-24 md:h-32 lg:h-44 flex items-center justify-center p-4 bg-white border-b border-gray-50">
+                            <img src="{{ asset('produk/'.$item->gambar) }}" alt="{{ $item->nama_produk }}" class="max-h-24 sm:max-h-28 lg:max-h-full object-contain mx-auto">
                         </div>
 
-                        <div class="p-4 flex flex-col flex-1 justify-between">
+                        <div class="p-2.5 lg:p-4 flex flex-col flex-1 justify-between">
                             <div>
-                                <h3 class="font-bold text-gray-900 text-sm leading-tight line-clamp-2 min-h-[40px]">
+                                <h3 class="font-bold text-gray-900 text-xs md:text-sm leading-tight line-clamp-2 min-h-[40px]">
                                     {{ $item->nama_produk }}
                                 </h3>
-                                <p class="text-base font-black text-[#0A2D73] mt-2">
+                                <p class="text-xs md:text-base font-black text-[#0A2D73] mt-2">
                                     Rp {{ number_format($item->harga,0,',','.') }}
                                 </p>
                             </div>
@@ -567,9 +631,9 @@ setTimeout(() => {
                                 <input type="hidden" name="produk_id" value="{{ $item->id }}">
                                 <div class="flex items-center justify-between gap-2">
                                     <div class="flex border border-gray-300 rounded-xl overflow-hidden bg-gray-50">
-                                        <button type="button" onclick="kurang({{ $item->id }})" class="w-8 h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">-</button>
-                                        <input type="text" id="qty{{ $item->id }}" name="qty" value="1" readonly class="w-8 h-8 text-center bg-transparent border-0 text-xs font-bold focus:ring-0 p-0">
-                                        <button type="button" onclick="tambah({{ $item->id }}, {{ $item->stok }})" class="w-8 h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">+</button>                                    </div>
+                                        <button type="button" onclick="kurang({{ $item->id }})" class="w-7 h-7 lg:w-8 lg:h-8 flex items-center justify-center text-xs md:text-sm font-bold hover:bg-gray-200">-</button>
+                                        <input type="text" id="qty{{ $item->id }}" name="qty" value="1" readonly class="w-7 h-7 lg:w-8 lg:h-8 text-center bg-transparent border-0 text-xs font-bold focus:ring-0 p-0">
+                                        <button type="button" onclick="tambah({{ $item->id }}, {{ $item->stok }})" class="w-7 h-7 lg:w-8 lg:h-8 flex items-center justify-center text-sm font-bold hover:bg-gray-200">+</button>                                    </div>
                                     <button type="submit" class="w-9 h-9 rounded-xl bg-[#0A2D73] text-white flex items-center justify-center hover:scale-105 transition shadow-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386a1.5 1.5 0 011.415 1.03L5.76 6.75m0 0h12.99m-12.99 0l1.5 7.5h9.99l1.5-7.5M9 19.5a.75.75 0 100 1.5.75.75 0 000-1.5zm9 0a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
@@ -585,7 +649,7 @@ setTimeout(() => {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <h3 class="text-lg font-bold text-gray-900">Produk Tidak Ditemukan</h3>
-                        <p class="text-sm text-gray-500 mt-2 max-w-sm">
+                        <p class="text-xs md:text-sm text-gray-500 mt-2 max-w-sm">
                             Maaf, kami tidak menemukan produk yang sesuai dengan pencarian atau filtermu. Coba ubah kata kunci atau hapus filter.
                         </p>
                         <a href="{{ url()->current() }}" class="mt-5 px-5 py-2.5 bg-purple-50 text-[#6250B4] rounded-full text-xs font-bold hover:bg-purple-100 transition">
@@ -780,7 +844,7 @@ function showToastWarning(pesan) {
                 </svg>
             </div>
             <div class="flex flex-col pr-4">
-                <h4 class="font-extrabold text-gray-900 text-base leading-tight">Stok Terbatas</h4>
+                <h4 class="font-extrabold text-gray-900 text-xs md:text-base leading-tight">Stok Terbatas</h4>
                 <p class="text-sm font-medium text-gray-600 mt-0.5">${pesan}</p>
             </div>
             <button onclick="this.closest('#toast-warning-container').remove()" class="ml-auto pl-2 text-gray-400 hover:text-gray-600 transition-colors">
@@ -812,6 +876,8 @@ function showToastWarning(pesan) {
         }
     }, 3500);
 }
+
+
 </script>
 
 <script>
