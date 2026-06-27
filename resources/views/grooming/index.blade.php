@@ -128,7 +128,7 @@ body{
                         <ul class="space-y-3 my-4 text-xs">
                             <li class="flex justify-between items-center pb-2.5 border-b border-dashed border-gray-200">
                                 <span class="text-gray-600 font-semibold">Mandi Biasa + Kering</span>
-                                <span class="font-extrabold text-[#6250B4] text-sm">Rp 85.000</span>
+                                <span class="font-extrabold text-[#6250B4] text-sm">Rp85.000</span>
                             </li>
                             <li class="text-gray-400 text-[11px] leading-relaxed pt-1">
                                 * Termasuk potong kuku & bersihkan telinga
@@ -158,11 +158,11 @@ body{
                         <ul class="space-y-3 my-4 text-xs">
                             <li class="flex justify-between items-center pb-2.5 border-b border-dashed border-gray-200">
                                 <span class="text-gray-600 font-semibold">Anjing &lt; 5kg</span>
-                                <span class="font-extrabold text-pink-600 text-sm">Rp 100.000</span>
+                                <span class="font-extrabold text-pink-600 text-sm">Rp100.000</span>
                             </li>
                             <li class="flex justify-between items-center pb-2.5 border-b border-dashed border-gray-200">
                                 <span class="text-gray-600 font-semibold">Anjing 5 - 10kg</span>
-                                <span class="font-extrabold text-pink-600 text-sm">Rp 125.000</span>
+                                <span class="font-extrabold text-pink-600 text-sm">Rp125.000</span>
                             </li>
                         </ul>
                     </div>
@@ -189,11 +189,11 @@ body{
                         <ul class="space-y-3 my-4 text-xs">
                             <li class="flex justify-between items-center pb-2.5 border-b border-dashed border-gray-200">
                                 <span class="text-gray-600 font-semibold">Anjing 10 - 20kg</span>
-                                <span class="font-extrabold text-teal-600 text-sm">Rp 150.000</span>
+                                <span class="font-extrabold text-teal-600 text-sm">Rp150.000</span>
                             </li>
                             <li class="flex justify-between items-center pb-2.5 border-b border-dashed border-gray-200">
                                 <span class="text-gray-600 font-semibold">Anjing &gt; 20kg</span>
-                                <span class="font-extrabold text-teal-600 text-sm">Rp 175.000</span>
+                                <span class="font-extrabold text-teal-600 text-sm">Rp175.000</span>
                             </li>
                         </ul>
                     </div>
@@ -268,7 +268,7 @@ body{
                             <label class="block mb-1 text-xs font-semibold text-gray-700">Tanggal Booking</label>
                             <input type="date" name="tanggal" required
                                 class="w-full text-xs rounded-xl border border-gray-300 bg-gray-50 px-3 py-2 text-gray-700 focus:border-[#6250B4] focus:ring-2 focus:ring-purple-100 transition">
-                            <p class="text-[10px] text-gray-400 mt-1">Tersedia Setiap Hari 10.00 - 17.00 WIB</p>
+                            <p class="text-[10px] text-gray-400 mt-1">Tersedia Setiap Hari 09.00 - 19.00 WIB</p>
                         </div>
 
                         <div>
@@ -298,16 +298,16 @@ body{
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span class="text-gray-500">Paket Grooming</span>
-                                <span id="hargaLayanan" class="font-semibold text-gray-700">Rp 0</span>
+                                <span id="hargaLayanan" class="font-semibold text-gray-700">Rp0</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-500">Antar Jemput</span>
-                                <span id="hargaJemput" class="font-semibold text-gray-700">Rp 0</span>
+                                <span id="hargaJemput" class="font-semibold text-gray-700">Rp0</span>
                             </div>
                             <hr class="border-gray-200 my-1">
                             <div class="flex justify-between items-center pt-1">
                                 <span class="font-bold text-gray-800 text-sm">Total Pembayaran</span>
-                                <span id="totalHarga" class="text-lg font-black text-[#6250B4]">Rp 0</span>
+                                <span id="totalHarga" class="text-lg font-black text-[#6250B4]">Rp0</span>
                             </div>
                         </div>
                     </div>
@@ -464,9 +464,9 @@ function hitungTotal() {
     let harga = 0;
 
     if(!layanan.value){
-        hargaLayanan.innerHTML = 'Rp 0';
-        hargaJemput.innerHTML = 'Rp 0';
-        totalHarga.innerHTML = 'Rp 0';
+        hargaLayanan.innerHTML = 'Rp0';
+        hargaJemput.innerHTML = 'Rp0';
+        totalHarga.innerHTML = 'Rp0';
         return;
     }
 
@@ -499,9 +499,9 @@ function hitungTotal() {
 
     let total = harga + biayaJemput;
 
-    hargaLayanan.innerHTML = 'Rp ' + harga.toLocaleString('id-ID');
-    hargaJemput.innerHTML = 'Rp ' + biayaJemput.toLocaleString('id-ID');
-    totalHarga.innerHTML = 'Rp ' + total.toLocaleString('id-ID');
+    hargaLayanan.innerHTML = 'Rp' + harga.toLocaleString('id-ID');
+    hargaJemput.innerHTML = 'Rp' + biayaJemput.toLocaleString('id-ID');
+    totalHarga.innerHTML = 'Rp' + total.toLocaleString('id-ID');
 }
 
 layanan.addEventListener('change', hitungTotal);

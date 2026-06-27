@@ -116,7 +116,7 @@
 
                 <span>
 
-                    Rp {{ number_format($data['harga_kamar']) }}
+                    Rp{{ number_format($data['harga_kamar'], 0, ',', '.') }}
 
                 </span>
 
@@ -140,7 +140,7 @@
 
                 <span>
 
-                    Rp {{ number_format($data['harga_kamar'] * $data['lama_menginap']) }}
+                    Rp{{ number_format($data['harga_kamar'] * $data['lama_menginap'], 0, ',', '.') }}
 
                 </span>
 
@@ -152,7 +152,7 @@
 
                 <span>
 
-                    Rp {{ number_format($data['biaya_jemput']) }}
+                    Rp{{ number_format($data['biaya_jemput'], 0, ',', '.') }}
 
                 </span>
 
@@ -172,7 +172,7 @@
 
             <span class="text-xl font-black text-purple-700">
 
-                Rp {{ number_format($data['total_bayar']) }}
+                Rp{{ number_format($data['total_bayar'], 0, ',', '.') }}
 
             </span>
 
@@ -189,28 +189,17 @@
 
         @csrf
 
-        <h3 class="font-bold text-lg mb-3">
-
-            Metode Pembayaran
-
-        </h3>
-
         <div class="mt-5">
 
-            <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-xs">
+            <div class="mt-5 bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-xs">
 
-                <h3 class="font-bold text-base mb-1">
-                    Informasi Booking
+                <h3 class="font-bold text-yellow-700 mb-1">
+                    📱 Konfirmasi WhatsApp
                 </h3>
 
-                <p class="text-gray-600 leading-relaxed">
-                    Setelah menekan tombol booking, data akan langsung
-                    tersimpan ke sistem dan Anda akan diarahkan ke
-                    WhatsApp Admin untuk melakukan konfirmasi jadwal.
-                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Klik tombol di bawah untuk menghubungi WhatsApp admin. Jika ada pertanyaan, kebutuhan khusus, atau informasi tambahan mengenai booking pethotel Anda, admin siap membantu.
 
-                <p class="text-gray-600 mt-1">
-                    Pembayaran dilakukan saat datang ke klinik.
                 </p>
 
             </div>

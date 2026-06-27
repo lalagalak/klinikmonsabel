@@ -222,14 +222,14 @@
         @endphp
 
         <a href="/keranjang"
-        class="relative flex items-center justify-center
-            w-10 h-10 md:w-12 md:h-12
+        class="relative md:hidden flex items-center justify-center
+            w-10 h-10
             rounded-full
             bg-white
             shadow-lg
             border
             hover:scale-110
-            transition">
+            transition"
 
             🛒
 
@@ -463,7 +463,7 @@
     </a>
 
     <hr>
-    
+
     @guest
 
     <a href="/login" class="block px-6 py-4 border-b">

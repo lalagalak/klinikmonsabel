@@ -118,7 +118,7 @@
 
                 <span>
 
-                    Rp {{ number_format($data['harga']) }}
+                    Rp{{ number_format($data['harga'], 0, ',', '.') }}
 
                 </span>
 
@@ -130,7 +130,7 @@
 
                 <span>
 
-                    Rp {{ number_format($data['biaya_jemput']) }}
+                    Rp{{ number_format($data['biaya_jemput'], 0, ',', '.') }}
 
                 </span>
 
@@ -150,7 +150,7 @@
 
             <span class="text-xl font-black text-[#6250B4]">
 
-                Rp {{ number_format($data['total']) }}
+                Rp{{ number_format($data['total'], 0, ',', '.') }}
 
             </span>
 
@@ -171,8 +171,7 @@
 
         <p class="text-gray-700 leading-relaxed">
 
-            Setelah menekan tombol di bawah, data booking akan otomatis tersimpan ke sistem Klinik Hewan Monsabel dan Anda akan diarahkan ke WhatsApp admin untuk konfirmasi jadwal grooming.
-
+        Klik tombol di bawah untuk menghubungi WhatsApp admin. Jika ada pertanyaan, kebutuhan khusus, atau informasi tambahan mengenai booking grooming Anda, admin siap membantu.
         </p>
 
     </div>

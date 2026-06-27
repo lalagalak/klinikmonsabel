@@ -256,27 +256,27 @@
 
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="text-sm text-gray-700">Kucing</span>
-                        <span class="font-bold text-[#6250B4]">Rp 70.000</span>
+                        <span class="font-bold text-[#6250B4]">Rp70.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="text-sm text-gray-700">Anjing < 5 Kg</span>
-                        <span class="font-bold text-[#6250B4]">Rp 75.000</span>
+                        <span class="font-bold text-[#6250B4]">Rp75.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="text-sm text-gray-700">Anjing 5 - 10 Kg</span>
-                        <span class="font-bold text-[#6250B4]">Rp 85.000</span>
+                        <span class="font-bold text-[#6250B4]">Rp85.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="text-sm text-gray-700">Anjing 10 - 20 Kg</span>
-                        <span class="font-bold text-[#6250B4]">Rp 100.000</span>
+                        <span class="font-bold text-[#6250B4]">Rp100.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3">
                         <span class="text-sm text-gray-700">Anjing > 20 Kg</span>
-                        <span class="font-bold text-[#6250B4]">Rp 110.000</span>
+                        <span class="font-bold text-[#6250B4]">Rp110.000</span>
                     </div>
 
                 </div>
@@ -305,27 +305,27 @@
 
                     <div class="flex justify-between items-center py-3 border-b border-white/10">
                         <span class="text-sm text-white">Kucing</span>
-                        <span class="font-bold text-white">Rp 85.000</span>
+                        <span class="font-bold text-white">Rp85.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3 border-b border-white/10">
                         <span class="text-sm text-white">Anjing < 5 Kg</span>
-                        <span class="font-bold text-white">Rp 100.000</span>
+                        <span class="font-bold text-white">Rp100.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3 border-b border-white/10">
                         <span class="text-sm text-white">Anjing 5 - 10 Kg</span>
-                        <span class="font-bold text-white">Rp 115.000</span>
+                        <span class="font-bold text-white">Rp115.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3 border-b border-white/10">
                         <span class="text-sm text-white">Anjing 10 - 20 Kg</span>
-                        <span class="font-bold text-white">Rp 125.000</span>
+                        <span class="font-bold text-white">Rp125.000</span>
                     </div>
 
                     <div class="flex justify-between items-center py-3">
                         <span class="text-sm text-white">Anjing > 20 Kg</span>
-                        <span class="font-bold text-white">Rp 150.000</span>
+                        <span class="font-bold text-white">Rp150.000</span>
                     </div>
 
                 </div>
@@ -458,7 +458,7 @@
                             <div class="space-y-2 text-xs">
                                 <div class="flex justify-between">
                                     <span class="text-gray-600">Harga Kamar</span>
-                                    <span id="hargaKamar" class="font-semibold">Rp 0</span>
+                                    <span id="hargaKamar" class="font-semibold">Rp0</span>
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600">Lama Menginap</span>
@@ -466,7 +466,7 @@
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600">Antar Jemput</span>
-                                    <span id="hargaJemput" class="font-semibold">Rp 0</span>
+                                    <span id="hargaJemput" class="font-semibold">Rp0</span>
                                 </div>
                             </div>
                             <hr class="my-3">
@@ -482,7 +482,7 @@
                  font-extrabold
                  text-[#6250B4]
                  whitespace-nowrap">
-        Rp 0
+        Rp0
     </span>
 
 </div>
@@ -657,7 +657,7 @@
     };
 
     function formatRupiah(angka) {
-        return 'Rp ' + angka.toLocaleString('id-ID');
+        return 'Rp' + angka.toLocaleString('id-ID');
     }
 
     function hitungTotal() {

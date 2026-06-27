@@ -367,7 +367,7 @@
 
                                     <div class="mt-1.5 font-bold text-purple-600 text-sm">
 
-                                        Rp {{ number_format($item['harga'] * $item['qty']) }}
+                                        Rp{{ number_format($item['harga'] * $item['qty'], 0, ',', '.') }}
 
                                     </div>
 
@@ -390,7 +390,7 @@
                                 </span>
 
                                 <span class="font-bold">
-                                    Rp {{ number_format($total) }}
+                                    Rp{{ number_format($total, 0, ',', '.') }}
                                 </span>
 
                             </div>
@@ -405,7 +405,7 @@
                                 <span id="ongkirText"
                                     class="font-bold text-green-600">
 
-                                    Rp 0
+                                    Rp0
 
                                 </span>
 
@@ -420,7 +420,7 @@
                                 <span id="grandTotal"
                                     class="text-2xl font-bold text-purple-600">
 
-                                    Rp {{ number_format($total) }}
+                                    Rp{{ number_format($total, 0, ',', '.') }}
 
                                 </span>
 
@@ -477,11 +477,11 @@ function updateTotal(){
     const total = subtotal + ongkir;
 
     ongkirText.innerHTML =
-        'Rp ' +
+        'Rp' +
         ongkir.toLocaleString('id-ID');
 
     grandTotal.innerHTML =
-        'Rp ' +
+        'Rp' +
         total.toLocaleString('id-ID');
 }
 

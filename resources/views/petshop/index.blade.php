@@ -401,7 +401,7 @@ setTimeout(() => {
                         {{ $trending->nama_produk }}
                     </h3>
                     <p class="text-sm lg:text-base font-black text-[#0A2D73] mt-2">
-                        Rp {{ number_format($trending->harga,0,',','.') }}
+                        Rp{{ number_format($trending->harga,0,',','.') }}
                     </p>
                 </div>
 
@@ -622,7 +622,7 @@ setTimeout(() => {
                                     {{ $item->nama_produk }}
                                 </h3>
                                 <p class="text-xs md:text-base font-black text-[#0A2D73] mt-2">
-                                    Rp {{ number_format($item->harga,0,',','.') }}
+                                    Rp{{ number_format($item->harga,0,',','.') }}
                                 </p>
                             </div>
 

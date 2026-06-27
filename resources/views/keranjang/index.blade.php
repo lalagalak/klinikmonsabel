@@ -128,7 +128,7 @@
 
                                 <div class="mt-1 text-[#6250B4] font-bold text-sm">
 
-                                    Rp {{ number_format($item['harga']) }}
+                                    Rp{{ number_format($item['harga'], 0, ',', '.') }}
 
                                 </div>
 
@@ -177,7 +177,7 @@
 
                             <div class="text-base font-bold text-gray-800">
 
-                                Rp {{ number_format($subtotal) }}
+                                Rp{{ number_format($subtotal, 0, ',', '.') }}
 
                             </div>
 
@@ -291,7 +291,7 @@
                             </span>
 
                             <span class="font-bold">
-                                Rp {{ number_format($total) }}
+                                Rp{{ number_format($total, 0, ',', '.') }}
                             </span>
 
                         </div>
@@ -317,7 +317,7 @@
                             </span>
 
                             <span class="font-bold text-pink-500">
-                                Rp 0
+                                Rp0
                             </span>
 
                         </div>
@@ -334,7 +334,7 @@
 
                         <span class="text-2xl font-bold text-[#6250B4]">
 
-                            Rp {{ number_format($total) }}
+                            Rp{{ number_format($total, 0, ',', '.') }}
 
                         </span>
 
