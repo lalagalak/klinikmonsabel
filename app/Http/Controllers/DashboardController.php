@@ -42,10 +42,8 @@ public function admin()
 
     $totalTransaksi = Transaksi::count();
 
-    $totalPemasukan = Transaksi::whereIn('status', [
-    'Diproses',
-    'Selesai'
-])->sum('total');
+    $totalPemasukan = Transaksi::where('status', 'Selesai')
+    ->sum('total');
 
     $totalGrooming = Grooming::count();
 

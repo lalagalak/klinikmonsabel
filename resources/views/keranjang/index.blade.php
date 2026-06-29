@@ -66,8 +66,7 @@
 
                 <div class="bg-white rounded-2xl shadow-md border overflow-hidden">
 
-                    <div class="grid grid-cols-12 px-5 py-3 border-b bg-[#FDF1E2] font-bold text-sm text-gray-600">
-
+<div class="hidden md:grid grid-cols-12 px-5 py-3 border-b bg-[#FDF1E2] font-bold text-sm text-gray-600">
                         <div class="col-span-6">
                             Produk
                         </div>
@@ -339,8 +338,6 @@
                         </span>
 
                     </div>
-
-
 
                     <div class="bg-[#F4F0DD] border-[#E9DFC1] rounded-xl p-4 mb-5">
 

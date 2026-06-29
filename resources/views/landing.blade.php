@@ -844,7 +844,7 @@
 
                 <!-- PROFIL DRH DEWI -->
                 <div class="mt-10 bg-white rounded-[24px] p-6 border border-gray-100 shadow-sm flex items-center gap-6">
-                    <img src="{{ asset('images/founder.jpg') }}" class="w-20 h-20 rounded-full object-cover border-2 border-[#6250B4]" alt="drh. Dewi">
+                    <img src="{{ asset('images/drhdewi.jpg') }}" class="w-20 h-20 rounded-full object-cover border-2 border-[#6250B4]" alt="drh. Dewi">
                     <div>
                         <h3 class="text-lg font-bold text-gray-900">drh. Dewi Naike Nainggolan, M.Si</h3>
                         <p class="text-sm text-[#6250B4] font-semibold">Founder & Veterinarian</p>
@@ -901,7 +901,7 @@
                     <!-- DOKTER 1 -->
                     <div class="group flex-[3] hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
 
-                        <img src="{{ asset('images/dokter1.jpg') }}"
+                        <img src="{{ asset('images/drhdewi.jpg') }}"
                              class="w-full h-full object-cover">
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -923,7 +923,7 @@
                     <!-- DOKTER 2 -->
                     <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
 
-                        <img src="{{ asset('images/dokter2.jpg') }}"
+                        <img src="{{ asset('images/drhsarah.jpg') }}"
                              class="w-full h-full object-cover">
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -941,7 +941,7 @@
                     <!-- DOKTER 3 -->
                     <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
 
-                        <img src="{{ asset('images/dokter3.jpg') }}"
+                        <img src="{{ asset('images/drhbella.png') }}"
                              class="w-full h-full object-cover">
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -956,28 +956,10 @@
 
                     </div>
 
-                    <!-- DOKTER 4 -->
-                    <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
-
-                        <img src="{{ asset('images/dokter4.jpg') }}"
-                             class="w-full h-full object-cover">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-                        <div class="absolute bottom-6 left-4 text-white">
-
-                            <h3 class="font-bold text-xl">
-                                drh. Oktryna Sibarani
-                            </h3>
-
-                        </div>
-
-                    </div>
-
                     <!-- DOKTER 5 -->
                     <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
 
-                        <img src="{{ asset('images/dokter5.jpg') }}"
+                        <img src="{{ asset('images/drhsuriate.jpeg') }}"
                              class="w-full h-full object-cover">
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -992,57 +974,6 @@
 
                     </div>
 
-                    <!-- DOKTER 6 -->
-                    <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
-
-                        <img src="{{ asset('images/dokter6.jpg') }}"
-                             class="w-full h-full object-cover">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-                        <div class="absolute bottom-6 left-4 text-white">
-
-                            <h3 class="font-bold text-xl">
-                                drh. Putrina Siregar
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-                    <!-- DOKTER 7 -->
-                    <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
-
-                        <img src="{{ asset('images/dokter7.jpg') }}"
-                             class="w-full h-full object-cover">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-                        <div class="absolute bottom-6 left-4 text-white">
-
-                            <h3 class="font-bold text-xl">
-                                drh. Uswatun Hasanah
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-                    <!-- DOKTER 8 -->
-                    <div class="group flex-1 hover:flex-[6] transition-all duration-700 relative rounded-[35px] overflow-hidden">
-
-                        <img src="{{ asset('images/dokter8.jpg') }}"
-                             class="w-full h-full object-cover">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-                        <div class="absolute bottom-6 left-4 text-white">
-
-                            <h3 class="font-bold text-xl">
-                                drh. Tengku Dinda
-                            </h3>
-
-                        </div>
 
                     </div>
 
@@ -1089,7 +1020,7 @@
                             <div class="flex items-center gap-4 mb-6">
 
                                 <img
-                                    src="{{ asset('images/admin1.jpg') }}"
+                                    src="{{ asset('images/logo.png') }}"
                                     class="w-14 h-14 rounded-full object-cover">
 
                                 <div>
@@ -1109,7 +1040,7 @@
                             <div class="flex items-center gap-4 mb-6">
 
                                 <img
-                                    src="{{ asset('images/admin2.jpg') }}"
+                                    src="{{ asset('images/logo.png') }}"
                                     class="w-14 h-14 rounded-full object-cover">
 
                                 <div>
@@ -1144,7 +1075,7 @@
                             <div class="flex items-center gap-4 mb-6">
 
                                 <img
-                                    src="{{ asset('images/paramedis1.jpg') }}"
+                                    src="{{ asset('images/logo.png') }}"
                                     class="w-14 h-14 rounded-full object-cover">
 
                                 <div>
@@ -1164,7 +1095,7 @@
                             <div class="flex items-center gap-4 mb-6">
 
                                 <img
-                                    src="{{ asset('images/paramedis2.jpg') }}"
+                                    src="{{ asset('images/logo.png') }}"
                                     class="w-14 h-14 rounded-full object-cover">
 
                                 <div>
@@ -1197,7 +1128,7 @@
                         <div class="flex items-center gap-4 mb-6">
 
                             <img
-                                src="{{ asset('images/kebersihan1.jpg') }}"
+                                src="{{ asset('images/logo.png') }}"
                                 class="w-14 h-14 rounded-full object-cover">
 
                             <div>

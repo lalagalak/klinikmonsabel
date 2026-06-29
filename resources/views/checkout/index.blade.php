@@ -268,22 +268,10 @@
                                     Transfer Manual
                                 </h3>
 
-                                <div class="space-y-1 text-xs text-gray-700 font-medium">
+                                <div class="space-y-2 text-xs text-gray-700 font-medium">
 
                                     <div>
-                                        BCA : 123456789
-                                    </div>
-
-                                    <div>
-                                        BRI : 987654321
-                                    </div>
-
-                                    <div>
-                                        DANA : 08123456789
-                                    </div>
-
-                                    <div>
-                                        GOPAY : 08123456789
+                                        BCA : 0221620711
                                     </div>
 
                                 </div>

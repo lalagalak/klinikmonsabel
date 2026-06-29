@@ -168,14 +168,70 @@
             color: #721c24;
         }
 
+        .logo{
+            width:70px;
+        }
+
+        .klinik{
+            text-align:center;
+        }
+
+        .klinik h1{
+            margin:0;
+            font-size:24px;
+            color:#6250B4;
+        }
+
+        .klinik h2{
+            margin:2px 0;
+            font-size:14px;
+        }
+
+        .klinik p{
+            margin:2px 0;
+            font-size:11px;
+        }
+
+        .garis{
+            border-top:3px solid #000;
+            border-bottom:1px solid #000;
+            margin-top:8px;
+        }
+
+        .ttd{
+            width:100%;
+            margin-top:20px;
+            page-break-inside: avoid;
+        }
+
+        .ttd td{
+            border:none;
+        }
+
+        .ttd-kanan{
+            width:40%;
+            text-align:center;
+        }
+
+        .nama-ttd{
+            margin-top:70px;
+            font-weight:bold;
+            text-decoration:underline;
+        }
+
         /* Penutup / Kaki Halaman */
-        .footer {
-            margin-top: 35px;
-            text-align: right;
-            font-size: 10px;
-            color: #999999;
-            border-top: 1px solid #eeeeee;
-            padding-top: 10px;
+        .footer{
+            position: fixed;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+
+            text-align:center;
+            font-size:10px;
+            color:#777;
+
+            border-top:1px solid #ddd;
+            padding-top:6px;
         }
     </style>
 </head>
@@ -206,27 +262,93 @@
 @endphp
 
 <div class="header">
-    <table class="header-table">
-        <tr>
-            <td>
-                <div class="judul">KLINIK HEWAN MONSABEL</div>
-                <div class="subjudul">
-                    @if($kategori == 'grooming')
-                        Laporan Bulanan Aktivitas Grooming
-                    @elseif($kategori == 'hotel')
-                        Laporan Bulanan Aktivitas Pet Hotel
-                    @else
-                        Laporan Bulanan Transaksi Petshop
-                    @endif
-                </div>
-                <div class="info">Periode: Bulan {{ $bulan }} Tahun {{ $tahun }}</div>
-            </td>
-            <td class="text-right">
-                <div class="info" style="margin-bottom: 2px;">Tanggal Cetak:</div>
-                <div class="info" style="font-weight: bold; color: #333333;">{{ date('d F Y') }}</div>
-            </td>
-        </tr>
-    </table>
+
+<table width="100%">
+
+<tr>
+
+<td width="15%">
+
+<img src="{{ public_path('images/logo.png') }}" class="logo">
+
+</td>
+
+<td class="klinik">
+
+<h1>MONSABEL PET CLINIC</h1>
+
+<h2>drh. Dewi Naike Nainggolan, M.Si</h2>
+
+<p>
+Jl. Karya Rakyat No.46,
+Sei Agul,
+Kec. Medan Barat,
+Kota Medan,
+Sumatera Utara 20117
+</p>
+
+<p>
+No. HP : 0813-6117-5932
+</p>
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="garis"></div>
+
+<br>
+
+<table width="100%">
+
+<tr>
+
+<td>
+
+<b>
+
+@if($kategori=='grooming')
+
+LAPORAN BULANAN AKTIVITAS GROOMING
+
+@elseif($kategori=='hotel')
+
+LAPORAN BULANAN AKTIVITAS PET HOTEL
+
+@else
+
+LAPORAN BULANAN TRANSAKSI PETSHOP
+
+@endif
+
+</b>
+
+<br>
+
+Periode :
+
+{{ $bulan }}
+
+{{ $tahun }}
+
+</td>
+
+<td align="right">
+
+Tanggal Cetak
+
+<br>
+
+<b>{{ date('d F Y') }}</b>
+
+</td>
+
+</tr>
+
+</table>
+
 </div>
 
 <div class="section-title">Ringkasan Eksekutif</div>
@@ -529,8 +651,41 @@
 
 @endif
 
+<table class="ttd">
+
+<tr>
+
+<td></td>
+
+<td class="ttd-kanan">
+
+Medan,
+
+{{ now()->locale('id')->translatedFormat('d F Y H:i') }}
+
+<br><br>
+
+Administrator
+
+<div class="nama-ttd">
+
+(__________________________)
+
+</div>
+
+Klinik Hewan Monsabel
+
+</td>
+
+</tr>
+
+</table>
+
 <div class="footer">
-    Dicetak otomatis melalui Sistem Informasi Manajemen Klinik Hewan Monsabel
+
+Dicetak pada {{ now()->locale('id')->translatedFormat('d F Y H:i') }}
+oleh Klinik Hewan Monsabel
+
 </div>
 
 </body>

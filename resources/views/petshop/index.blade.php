@@ -9,19 +9,22 @@
             flex items-center justify-center">
 
     <div id="cart-toast"
-         class="bg-black/80
-                backdrop-blur-sm
-                rounded-3xl
-                px-12 py-10
-                text-white
-                text-center
-                shadow-2xl
-                opacity-0 scale-90
-                transition-all duration-300">
+        class="bg-black/80
+            backdrop-blur-sm
+            rounded-2xl
+            px-6 py-5
+            md:px-12 md:py-10
+            w-[260px]
+            md:w-auto
+            text-white
+            text-center
+            shadow-2xl
+            opacity-0 scale-90
+            transition-all duration-300">
 
         <div class="flex justify-center mb-5">
 
-            <div class="w-20 h-20 bg-white rounded-full
+            <div class="w-12 h-12 md:w-20 md:h-20 bg-white rounded-full
                         flex items-center justify-center">
 
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +32,7 @@
                      viewBox="0 0 24 24"
                      stroke-width="3"
                      stroke="currentColor"
-                     class="w-10 h-10 text-green-600">
+                     class="w-6 h-6 md:w-10 md:h-10 text-green-600">
 
                     <path stroke-linecap="round"
                           stroke-linejoin="round"
@@ -41,7 +44,7 @@
 
         </div>
 
-        <h2 class="text-3xl font-bold">
+        <h2 class="text-lg md:text-3xl font-bold leading-tight">
             Ditambahkan ke keranjang
         </h2>
 
@@ -104,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         <div class="flex justify-center mb-4">
 
-            <div class="w-20 h-20 rounded-full
+            <div class="w-12 h-12 md:w-20 md:h-20 rounded-full
                         bg-white
                         flex items-center justify-center">
 
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function(){
                      viewBox="0 0 24 24"
                      stroke-width="3"
                      stroke="currentColor"
-                     class="w-10 h-10 text-green-600">
+                     class="w-6 h-6 md:w-10 md:h-10 text-green-600">
 
                     <path stroke-linecap="round"
                           stroke-linejoin="round"
@@ -185,54 +188,6 @@ setTimeout(() => {
 },2000);
 
 </script>
-
-@endif
-
-{{-- TOAST FILTER --}}
-@if(request()->hasAny(['search','kategori','brand','min','max']))
-
-<div id="toast-filter"
-     class="fixed top-6 left-1/2 -translate-x-1/2 z-[9999]">
-
-    <div class="bg-white shadow-xl rounded-full px-6 py-3 flex items-center gap-4 border">
-
-        @if($produk->count() > 0)
-
-            <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
-                ✓
-            </div>
-
-            <div>
-                <h4 class="font-bold">
-                    Produk Ditemukan
-                </h4>
-
-                <p class="text-sm text-gray-500">
-                    Ditemukan {{ $produk->total() }} produk.
-                </p>
-            </div>
-
-        @else
-
-            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center">
-                ✕
-            </div>
-
-            <div>
-                <h4 class="font-bold">
-                    Produk Tidak Ditemukan
-                </h4>
-
-                <p class="text-sm text-gray-500">
-                    Tidak ada produk yang sesuai.
-                </p>
-            </div>
-
-        @endif
-
-    </div>
-
-</div>
 
 @endif
 
@@ -909,6 +864,37 @@ window.addEventListener('load', function () {
 
 });
 
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const toast = document.getElementById("toast-filter");
+
+    if (!toast) return;
+
+    // muncul
+    toast.classList.add(
+        "transition-all",
+        "duration-500",
+        "opacity-100"
+    );
+
+    // hilang setelah 3 detik
+    setTimeout(() => {
+
+        toast.classList.add(
+            "opacity-0",
+            "-translate-y-5"
+        );
+
+        setTimeout(() => {
+            toast.remove();
+        },500);
+
+    },3000);
+
+});
 </script>
 
 </x-app-layout>

@@ -166,8 +166,8 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <h3 class="text-4xl font-black text-[#6250B4]">500+</h3>
-                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Hewan Menginap</p>
+                    <h3 class="text-4xl font-black text-[#6250B4]">98%</h3>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Pelanggan Puas</p>
                 </div>
                 <div>
                     <h3 class="text-4xl font-black text-[#6250B4]">24 Jam</h3>

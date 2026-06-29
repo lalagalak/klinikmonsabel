@@ -28,7 +28,7 @@
                 Home
             </a>
 
-            <a href="#about" class="hover:text-purple-600 transition">
+            <a href="/#about" class="hover:text-purple-600 transition">
                 About
             </a>
 
@@ -72,11 +72,11 @@
 
             </div>
 
-            <a href="#dokter" class="hover:text-purple-600 transition">
+            <a href="/#dokter" class="hover:text-purple-600 transition">
                 Doctors
             </a>
 
-            <a href="#contact" class="hover:text-purple-600 transition">
+            <a href="/#contact" class="hover:text-purple-600 transition">
                 Contact
             </a>
 
@@ -267,7 +267,7 @@
 
     <a href="/" class="block px-6 py-4 border-b">Home</a>
 
-    <a href="#about" class="block px-6 py-4 border-b">About</a>
+    <a href="/#about" class="block px-6 py-4 border-b">About</a>
 
     <details>
 
@@ -289,11 +289,11 @@
 
     </details>
 
-    <a href="#dokter" class="block px-6 py-4 border-b">
+    <a href="/#dokter" class="block px-6 py-4 border-b">
         Doctors
     </a>
 
-    <a href="#contact" class="block px-6 py-4 border-b">
+    <a href="/#contact" class="block px-6 py-4 border-b">
         Contact
     </a>
 
