@@ -95,7 +95,78 @@
                         $total += $subtotal;
                     @endphp
 
-                    <div class="grid grid-cols-12 items-center px-5 py-4 border-b hover:bg-[#FDF1E2] transition">
+                    <div class="md:hidden border-b p-4">
+
+    <div class="flex gap-3">
+
+        <img src="{{ asset('produk/'.$item['gambar']) }}"
+             class="w-20 h-20 rounded-xl object-cover bg-gray-100 shadow">
+
+        <div class="flex-1 min-w-0">
+
+            <h2 class="font-bold text-lg leading-tight break-words">
+                {{ $item['nama'] }}
+            </h2>
+
+            <p class="text-xs text-gray-500 mt-1">
+                Produk Petshop Monsabel
+            </p>
+
+            <div class="text-[#6250B4] font-bold text-xl mt-2">
+                Rp{{ number_format($item['harga'],0,',','.') }}
+            </div>
+
+            <div class="flex justify-between items-center mt-4">
+
+                <div class="flex items-center border rounded-xl overflow-hidden">
+
+                    @if($item['qty']==1)
+
+                    <button
+                        onclick="hapusJikaSatu('{{ $id }}')"
+                        class="px-3 py-2">
+                        -
+                    </button>
+
+                    @else
+
+                    <a href="/keranjang/kurangqty/{{ $id }}"
+                       class="px-3 py-2">
+                        -
+                    </a>
+
+                    @endif
+
+                    <span class="px-4 font-bold">
+                        {{ $item['qty'] }}
+                    </span>
+
+                    <a href="/keranjang/tambahqty/{{ $id }}"
+                       class="px-3 py-2">
+                        +
+                    </a>
+
+                </div>
+
+                <div class="font-bold text-lg">
+                    Rp{{ number_format($subtotal,0,',','.') }}
+                </div>
+
+            </div>
+
+            <button
+                onclick="hapusProduk('{{ $id }}')"
+                class="mt-3 w-full py-2 rounded-xl bg-red-100 text-red-600 font-bold">
+                Hapus
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+                    <div class="hidden md:grid grid-cols-12 items-center px-5 py-4 border-b hover:bg-[#FDF1E2] transition">
 
                         <div class="col-span-6 flex items-center gap-4">
 

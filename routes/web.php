@@ -86,7 +86,8 @@ Route::get('/transaksi', [TransaksiController::class, 'index'])
 // GROOMING
 Route::get('/grooming', [GroomingController::class, 'index']);
 
-Route::post('/grooming', [GroomingController::class, 'store']);
+Route::post('/grooming', [GroomingController::class, 'store'])
+->middleware('auth');
 
 Route::get('/admin/grooming', [GroomingController::class, 'data']);
 
@@ -113,7 +114,8 @@ Route::middleware('auth')->group(function () {
 // PETHOTEL
 Route::get('/hotel', [HotelController::class, 'index']);
 
-Route::post('/hotel', [HotelController::class, 'store']);
+Route::post('/hotel', [HotelController::class, 'store'])
+->middleware('auth');
 
 Route::get('/admin/hotel', [HotelController::class, 'data']);
 
